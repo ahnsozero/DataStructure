@@ -1,6 +1,6 @@
 package list.linkedlist.implementation;
 
-public class LinkedList {
+public class DoublyLinkedList {
 	private Node head;
 	private Node tail;
 	private int size = 0;
@@ -175,7 +175,7 @@ public class LinkedList {
 			if(nextIndex == 0) {
 				throw new IllegalStateException(); // 예외발생 시키기
 			}
-			LinkedList.this.remove(nextIndex - 1);
+			DoublyLinkedList.this.remove(nextIndex - 1);
 			nextIndex--;
 		}
 		

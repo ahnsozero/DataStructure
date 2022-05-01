@@ -1,4 +1,4 @@
-package list.linkedlist.implementation;
+package list.doublylinkedlist.implementation.copy;
 
 public class Main {
 

@@ -1,7 +1,7 @@
 package list;
 
 import list.arraylist.implementation.ArrayList;
-import list.linkedlist.implementation.LinkedList;
+import list.linkedlist.implementation.DoublyLinkedList;
 
 public class Main {
 
@@ -22,7 +22,7 @@ public class Main {
 		}
 		
 		
-		LinkedList l = new LinkedList(); //단방향 리스트
+		DoublyLinkedList l = new DoublyLinkedList(); //단방향 리스트
 		l.addLast(10);
 		l.addLast(20);
 		l.addLast(30);	
@@ -30,7 +30,7 @@ public class Main {
 		// 데이터를 중간에 추가하고 삭제함에 있어서 연결링크만 바꿔주면 되기 때문에 처리 속도가 빠르다.
 		a.get(2);
 		// 일일히 처음 head부터 순차적으로 데이터를 링크를 타고 조회해 오기 때문에 조회 속도가 느리다.
-		LinkedList.ListIterator li = l.listIterator();
+		DoublyLinkedList.ListIterator li = l.listIterator();
 		while(li.hasNext()) {
 			if((int)li.next() == 20) {
 				li.add(25);
