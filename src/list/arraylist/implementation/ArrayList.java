@@ -2,7 +2,9 @@ package list.arraylist.implementation;
 
 public class ArrayList {
 	private int size = 0;
-	private Object[] elementData = new Object[100];
+	private Object[] elementData = new Object[100]; 
+	//내부적으로 사용하는 배열크기 고정되어 있다; 100개 이상은 에러발생
+	// 그러나 자바에서 ArrayList는 효용범위 크기를 다 쓰면 두배이상크기의 배열 생성해서 알아서 만들어줌
 	
 	public boolean addFirst(Object element) {		
 		return add(0, element);
@@ -76,7 +78,7 @@ public class ArrayList {
 		return new ListIterator(); //새로운 ListIterator객체를 반환
 	}
 	
-	class ListIterator{
+	public class ListIterator{
 		private int nextIndex = 0;
 		
 		public Object next() {
